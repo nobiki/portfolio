@@ -1,0 +1,6 @@
+#!/bin/bash -eu
+cd $(dirname `realpath $0`)/../;source .env
+
+docker run --rm -d \
+  -v ${PWD}/src:/usr/share/nginx/html:ro \
+  nginx:alpine ${@}
