@@ -3,6 +3,6 @@ cd $(dirname `realpath $0`)/../;source .env
 
 docker run --rm \
   -u ${OWNER} \
-  -v ${PWD}/src:/src \
-  -w /src \
+  -v ${PWD}/app:/app \
+  -w /app \
   ${NODE_IMAGE} npx ${@}
