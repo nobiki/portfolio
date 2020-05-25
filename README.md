@@ -10,6 +10,6 @@ npm run --prefix app build
 ```
 
 ```
-go mod init
-
+go mod init api
+go mod tidy
 ```

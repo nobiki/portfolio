@@ -1,8 +1,5 @@
 .env
 node_modules/
 
-vendor/
-src/go/bin/
-src/go/pkg/
-src/go/src/*
-!src/go/src/portfolio
+go/
+!go/.gitkeep
