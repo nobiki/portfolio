@@ -1,2 +1,7 @@
 .env
 node_modules/
+
+vendor/
+src/go/bin/
+src/go/src/*
+!src/go/src/portfolio
