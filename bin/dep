@@ -1,9 +1,0 @@
-#!/bin/bash -eu
-cd $(dirname `realpath $0`)/../;source .env
-
-docker run --rm \
-  -u ${OWNER} \
-  -v ${PWD}/src/go:/go \
-  -w /go/src/portfolio \
-  --env-file .env \
-  ${GO_IMAGE} $(basename $0) ${@}
