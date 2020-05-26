@@ -2,16 +2,14 @@ version: '3.7'
 
 services:
 
-  go:
-    image: ${GO_IMAGE}
-    env_file: .env
-
   postgres:
     image: ${COMPOSE_PROJECT_NAME}-postgres
     build:
       context: ${PWD}/postgres
       dockerfile: Dockerfile
     env_file: .env
+    networks:
+      - b0
     ports:
       - 5432:5432
     volumes:
@@ -20,7 +18,13 @@ services:
   nginx:
     image: nginx:alpine
     env_file: .env
+    networks:
+      - b0
     ports:
       - 8080:80
     volumes:
       - ${PWD}/src/app/build/:/usr/share/nginx/html:ro
+
+networks:
+  b0:
+    name: ${COMPOSE_PROJECT_NAME}-net
