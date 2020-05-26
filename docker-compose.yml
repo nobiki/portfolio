@@ -17,6 +17,6 @@ services:
     image: nginx:alpine
     env_file: .env
     ports:
-      - 8080-8089:80
+      - 8080:80
     volumes:
       - ${PWD}/src/app/build/:/usr/share/nginx/html:ro
