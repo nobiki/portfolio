@@ -1,6 +1,4 @@
 #!/bin/bash -eu
 cd $(dirname `realpath $0`)/../;source .env
 
-docker run --rm -d \
-  -v ${PWD}/src/app/build/:/usr/share/nginx/html:ro \
-  nginx:alpine ${@}
+docker-compose ${@} nginx
