@@ -2,6 +2,10 @@ version: '3.7'
 
 services:
 
+  go:
+    image: ${GO_IMAGE}
+    env_file: .env
+
   postgres:
     image: ${COMPOSE_PROJECT_NAME}-postgres
     build:

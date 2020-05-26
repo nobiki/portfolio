@@ -1,10 +1,9 @@
 #!/bin/bash -eu
 cd $(dirname `realpath $0`)/../;source .env
 
-docker run --rm \
+docker-compose run --rm \
   -u ${OWNER} \
   -v ${PWD}/go:/go \
   -v ${PWD}/src/api:/api \
   -w /api \
-  --env-file .env \
-  ${GO_IMAGE} $(basename $0) ${@}
+  go $(basename $0) ${@}
