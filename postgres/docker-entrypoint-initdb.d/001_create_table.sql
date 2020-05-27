@@ -1,19 +1,21 @@
 begin;
 
-create domain us_postal_code as varchar(10) default '11111-1111'
-check(
-    VALUE ~ '^\d{5}$'
-OR VALUE ~ '^\d{5}-\d{4}$'
-);
+create domain created as timestamp default CURRENT_TIMESTAMP;
+create domain updated as timestamp default null;
 
-create table hoge
-(
-    id serial primary key,
-    name varchar(255) not null default 'hello',
-    postal us_postal_code
-);
+create table experiences (
+  id serial not null
+  , description varchar(255)
+  , text varchar(255)
+  , created created
+  , updated updated
+) ;
 
-insert into hoge (name) values ('hello1');
-insert into hoge (name) values ('hello2');
-insert into hoge (postal) values ('12345-1234');
+comment on table experiences is 'experiences';
+comment on column experiences.id is 'id';
+comment on column experiences.description is 'description';
+comment on column experiences.text is 'text';
+comment on column experiences.created is 'created';
+comment on column experiences.updated is 'updated';
+
 commit;
