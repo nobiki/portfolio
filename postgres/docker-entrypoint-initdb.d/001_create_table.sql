@@ -1,8 +1,9 @@
 begin;
 
 create domain created as timestamp default CURRENT_TIMESTAMP;
-create domain updated as timestamp default null;
+create domain updated as timestamp default CURRENT_TIMESTAMP;
 
+-- experiences
 create table experiences (
   id serial not null
   , description varchar(255)
@@ -17,5 +18,15 @@ comment on column experiences.description is 'description';
 comment on column experiences.text is 'text';
 comment on column experiences.created is 'created';
 comment on column experiences.updated is 'updated';
+
+create function set_update_time() returns opaque as '
+  begin
+    new.updated := ''now'';
+    return new;
+  end;
+' language 'plpgsql';
+
+create trigger update_trigger before update on experiences for each row
+  execute procedure set_update_time();
 
 commit;
