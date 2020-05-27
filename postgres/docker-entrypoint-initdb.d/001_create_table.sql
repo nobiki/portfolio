@@ -29,4 +29,9 @@ create function set_update_time() returns opaque as '
 create trigger update_trigger before update on experiences for each row
   execute procedure set_update_time();
 
+-- dummydata
+insert into experiences (description, text) values ('xxxxx1', 'xxxxxxxxxxxxxxx1');
+insert into experiences (description, text) values ('xxxxx2', 'xxxxxxxxxxxxxxx2');
+insert into experiences (description, text) values ('xxxxx3', 'xxxxxxxxxxxxxxx3');
+
 commit;

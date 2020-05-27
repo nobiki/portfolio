@@ -10,23 +10,24 @@ import (
 	_ "github.com/lib/pq"
 )
 
-type Prefecture struct {
+type Experience struct {
 	Id int
-	Name string
-	NameKana string
+	Year int
+	Description string
+	Text string
 }
-var prefectures []Prefecture
+var experiences []Experience
 
 func main() {
 	r := gin.Default()
 	r.GET("/postgres/gorm", func(c *gin.Context) {
-		db, err := gorm.Open("postgres", "host=192.168.16.2 user=user password=pass dbname=portfolio sslmode=disable")
+		db, err := gorm.Open("postgres", "host=172.29.0.3 user=user password=pass dbname=portfolio sslmode=disable")
 		if err != nil {
 			panic(err)
 		}
 		defer db.Close()
 
-		rows := db.Find(&prefectures)
+		rows := db.Find(&experiences)
 		if err != nil {
 			panic(err)
 		}
