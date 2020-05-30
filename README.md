@@ -9,6 +9,7 @@ npx create-react-app app
 ```
 
 ```
+npm install --prefix app
 npm run --prefix app build
 ```
 
