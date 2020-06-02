@@ -6,4 +6,4 @@ docker run --rm \
   -v ${PWD}/src:/src \
   -w /src \
   --env-file .env \
-  ${NODE_IMAGE} npm ${@}
+  ${NODE_IMAGE} npm "${@}"

@@ -1,4 +1,4 @@
 #!/bin/bash -eu
 cd $(dirname `realpath $0`)/../;source .env
 
-docker-compose ${@} postgres
+docker-compose "${@}" postgres

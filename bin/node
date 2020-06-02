@@ -5,4 +5,4 @@ docker run --rm \
   -u ${OWNER} \
   -v ${PWD}/src:/src \
   -w /src \
-  ${NODE_IMAGE} ${@}
+  ${NODE_IMAGE} "${@}"
