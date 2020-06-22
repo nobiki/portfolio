@@ -25,6 +25,21 @@ services:
     volumes:
       - ${PWD}/src/app/build/:/usr/share/nginx/html:ro
 
+  api:
+    image: ${GO_IMAGE}
+    env_file: .env
+    networks:
+      - b0
+    ports:
+      - 3001:3001
+    user: 1000:1000
+    volumes:
+      - ${PWD}/go:/go
+      - ${PWD}/src/api:/api
+    working_dir: /api
+    command: >
+      go run postgres.go
+
 networks:
   b0:
     name: ${COMPOSE_PROJECT_NAME}-net

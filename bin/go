@@ -8,4 +8,6 @@ docker run --rm \
   -w /api \
   --env-file .env \
   --network ${COMPOSE_PROJECT_NAME}-net \
+  --name ${COMPOSE_PROJECT_NAME}-go \
+  --hostname ${COMPOSE_PROJECT_NAME}-go \
   ${GO_IMAGE} $(basename $0) "${@}"

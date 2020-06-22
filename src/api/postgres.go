@@ -21,7 +21,7 @@ var experiences []Experience
 func main() {
 	r := gin.Default()
 	r.GET("/postgres/gorm", func(c *gin.Context) {
-		db, err := gorm.Open("postgres", "host=172.29.0.3 user=user password=pass dbname=portfolio sslmode=disable")
+		db, err := gorm.Open("postgres", "host=postgres user=user password=pass dbname=portfolio sslmode=disable")
 		if err != nil {
 			panic(err)
 		}
