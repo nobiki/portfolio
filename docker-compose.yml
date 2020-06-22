@@ -20,8 +20,6 @@ services:
     env_file: .env
     networks:
       - b0
-    ports:
-      - 8080:80
     volumes:
       - ${PWD}/src/app/build/:/usr/share/nginx/html:ro
 
@@ -39,6 +37,21 @@ services:
     working_dir: /api
     command: >
       go run postgres.go
+
+  https-portal:
+    image: steveltn/https-portal:1
+    networks:
+      - b0
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      DOMAINS: 'portfolio.local -> http://nginx:80, api.portfolio.local -> http://api:3001'
+      STAGE: local
+      WEBSOCKET: "true"
+    volumes:
+      - ${PWD}/https-portal/ssl-certs:/var/lib/https-portal
+      - ${PWD}/https-portal/nginx-conf/api.portfolio.local.ssl.conf.erb:/var/lib/nginx-conf/api.portfolio.local.ssl.conf.erb:ro
 
 networks:
   b0:

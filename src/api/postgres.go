@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 
-	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 
 	"github.com/jinzhu/gorm"
@@ -22,12 +21,9 @@ var experiences []Experience
 
 func main() {
 	r := gin.Default()
-	// CORS 対応
-	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"http://localhost"}
-	r.Use(cors.New(config))
 
 	r.GET("/postgres/gorm", func(c *gin.Context) {
+
 		db, err := gorm.Open("postgres", "host=postgres user=user password=pass dbname=portfolio sslmode=disable")
 		if err != nil {
 			panic(err)

@@ -12,14 +12,17 @@ class App extends Component {
   }
 
   getData() {
-    axios
-      .get('http://localhost:3001/postgres/gorm')
+    const url = '//api.portfolio.local/postgres/gorm'
+    const config = {}
+
+    axios.get(url, config)
       .then(results => {
         const data = results.data;
         this.setState({
           message: data['message']
         });
-      });
+      })
+      .catch(error => {console.log(error)});
   }
 
   render() {
