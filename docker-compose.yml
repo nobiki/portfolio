@@ -36,7 +36,7 @@ services:
       - ${PWD}/src/api:/api
     working_dir: /api
     command: >
-      go run postgres.go
+      go run rest.go
 
   https-portal:
     image: steveltn/https-portal:1

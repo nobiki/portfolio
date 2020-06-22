@@ -6,21 +6,21 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: ""
+      experiences: null,
     };
     this.getData = this.getData.bind(this);
   }
 
   getData() {
-    const url = '//api.portfolio.local/postgres/gorm'
+    const url = '//api.portfolio.local/get-experiences'
     const config = {}
 
     axios.get(url, config)
       .then(results => {
-        const data = results.data;
-        console.log(data);
+        console.log(results.data["Value"]);
+        console.log(typeof(results.data["Value"].json()));
         this.setState({
-          message: data['message']
+          experiences: results.data
         });
       })
       .catch(error => {console.log(error)});
@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div>
         <button onClick={this.getData}>getData</button>
-        <p>{this.state.message}</p>
+        <p>{this.state.experiences}</p>
     </div>
     );
   }
