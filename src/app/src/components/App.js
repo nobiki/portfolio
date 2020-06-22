@@ -18,6 +18,7 @@ class App extends Component {
     axios.get(url, config)
       .then(results => {
         const data = results.data;
+        console.log(data);
         this.setState({
           message: data['message']
         });
