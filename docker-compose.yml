@@ -38,6 +38,20 @@ services:
     command: >
       go run rest.go
 
+  app:
+    image: ${NODE_IMAGE}
+    env_file: .env
+    networks:
+      - b0
+    ports:
+      - 3000:3000
+    volumes:
+      - ${PWD}/src:/src
+    working_dir: /src
+    stdin_open: true
+    command: >
+      npm --prefix app run start
+
   https-portal:
     image: steveltn/https-portal:1
     networks:
