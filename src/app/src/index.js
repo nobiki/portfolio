@@ -4,9 +4,13 @@ import axios from 'axios';
 
 import './index.css';
 import App from './components/App'
+import Nav from './components/Nav'
 
 ReactDOM.render(
-  <App />,
+  <App>
+     <Nav></Nav>
+  </App>
+  ,
   document.getElementById('root')
 );
 

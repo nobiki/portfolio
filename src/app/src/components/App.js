@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div>
         <button onClick={this.getData}>getData</button>
-    </div>
+      </div>
     );
   }
 }
