@@ -1,3 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
+textarea {
+    overflow-y: auto !important;
+    resize: vertical !important;
+}
+
 #intro {
   background: url("../img/bg1.jpg") no-repeat center center;
   background-size: cover;
@@ -79,12 +88,26 @@ ul.timeline > li:before {
 }
 
 /* logo */
-i.lg {
+i.lg-2 {
     width: 41px;
     height: 48px;
     margin-bottom: -8px;
 }
 
+i.lg-1 {
+    width: 28px;
+    height: 28px;
+    margin-bottom: -8px;
+}
+
 i.lg-docker {
-  background: url("../img/logo/docker.svg") no-repeat center center;
+  background: url("../img/logo/docker.svg") round top left;
+}
+i.lg-php {
+  width: 53px;
+  background: url("../img/logo/php.svg") round top left;
+}
+i.lg-python {
+  width: 28px;
+  background: url("../img/logo/python.svg") round top left;
 }
