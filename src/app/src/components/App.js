@@ -31,8 +31,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.getData}>getData</button>
-        <Button color="primary">Hello World</Button>
+        <Button color="primary" onClick={this.getData}>getData</Button>
       </div>
     );
   }
