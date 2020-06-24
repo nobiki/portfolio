@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import { Button } from '@material-ui/core';
+
 class App extends Component {
 
   constructor(props) {
@@ -30,6 +32,7 @@ class App extends Component {
     return (
       <div>
         <button onClick={this.getData}>getData</button>
+        <Button color="primary">Hello World</Button>
       </div>
     );
   }
