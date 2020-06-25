@@ -55,6 +55,14 @@ textarea {
   font-size: 1.1em;
 }
 
+/* profile */
+.profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.2,1.2);
+}
+
 /* experience */
 ul.timeline {
     list-style-type: none;
@@ -103,11 +111,41 @@ i.lg-1 {
 i.lg-docker {
   background: url("../img/logo/docker.svg") round top left;
 }
+
+i.lg-mysql {
+  background: url("../img/logo/mysql.svg") round top left;
+}
+
+i.lg-vue {
+  background: url("../img/logo/vue.svg") round top left;
+}
+
+i.lg-aws {
+  height: 36px;
+  background: url("../img/logo/aws.svg") round top left;
+}
+
+i.lg-gcp {
+  background: url("../img/logo/gcp.svg") round top left;
+}
+
 i.lg-php {
   width: 53px;
   background: url("../img/logo/php.svg") round top left;
 }
+
 i.lg-python {
+  height: 41px;
+  background: url("../img/logo/python.svg") round top left;
+}
+i.lg-python-2 {
   width: 28px;
   background: url("../img/logo/python.svg") round top left;
 }
+
+i.lg-jcsqe {
+  width: 44px;
+  height: 28px;
+  background: url("../img/logo/jcsqe.jpg") round top left;
+}
+
