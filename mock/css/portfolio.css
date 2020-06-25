@@ -108,6 +108,10 @@ i.lg-1 {
     margin-bottom: -8px;
 }
 
+i.lg-debian {
+  background: url("../img/logo/debian.svg") round top left;
+}
+
 i.lg-docker {
   background: url("../img/logo/docker.svg") round top left;
 }
