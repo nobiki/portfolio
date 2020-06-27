@@ -17,7 +17,7 @@ textarea {
 }
 
 .navbar:not(.top-nav-collapse) {
-  background: transparent !important;
+  background: #3949ab !important;
 }
 
 @media (max-width: 768px) {
@@ -203,6 +203,15 @@ i.lg-codeigniter {
   background: url("../img/logo/codeigniter.svg") round top left;
 }
 
+i.lg-django {
+  width: 47px;
+  background: url("../img/logo/django.svg") round top left;
+}
+
+i.lg-rails {
+  background: url("../img/logo/rails.svg") round top left;
+}
+
 i.lg-php {
   width: 53px;
   background: url("../img/logo/php.svg") round top left;
@@ -217,9 +226,23 @@ i.lg-python-2 {
   background: url("../img/logo/python.svg") round top left;
 }
 
+i.lg-ruby {
+  width: 23px;
+  background: url("../img/logo/ruby.svg") round top left;
+}
+
 i.lg-fluentd {
   width: 40px;
   background: url("../img/logo/fluentd.svg") round top left;
+}
+
+i.lg-jmeter {
+  width: 84px;
+  background: url("../img/logo/jmeter.svg") round top left;
+}
+
+i.lg-selenium {
+  background: url("../img/logo/selenium.svg") round top left;
 }
 
 i.lg-jcsqe {
