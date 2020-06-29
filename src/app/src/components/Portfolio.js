@@ -4,6 +4,7 @@ import Helmet from "react-helmet"
 import Nav from "./portfolio/Nav"
 import Intro from "./portfolio/Intro"
 import Profile from "./portfolio/Profile"
+import Activity from "./portfolio/Activity"
 
 class Portfolio extends Component {
 
@@ -19,6 +20,7 @@ class Portfolio extends Component {
           <Nav></Nav>
           <Intro></Intro>
           <Profile></Profile>
+          <Activity></Activity>
         </header>
       </div>
     );
