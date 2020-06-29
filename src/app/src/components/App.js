@@ -1,7 +1,19 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-import { Button } from '@material-ui/core';
+import axios from "axios";
+
+import "../css/bootstrap.min.css";
+import "../css/mdb.min.css";
+import "../css/index.css";
+
+import Head from "./Head"
+import Portfolio from "./Portfolio"
 
 class App extends Component {
 
@@ -14,8 +26,8 @@ class App extends Component {
   }
 
   getData() {
-    // const url = '//api.portfolio.local/get-experiences'
-    const url = '//localhost:3001/get-experiences'
+    // const url = "//api.portfolio.local/get-experiences"
+    const url = "//localhost:3001/get-experiences"
     const config = {}
 
     axios.get(url, config)
@@ -30,9 +42,15 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Button color="primary" onClick={this.getData}>getData</Button>
-      </div>
+      <Router>
+        <Head />
+
+        <Switch>
+          <Route path="/">
+            <Portfolio />
+          </Route>
+        </Switch>
+      </Router>
     );
   }
 }
