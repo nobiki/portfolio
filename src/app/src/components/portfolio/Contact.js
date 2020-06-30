@@ -21,7 +21,7 @@ class Contact extends Component {
   }
 
   getCsrfToken(event) {
-    const url = "//localhost:3001/protected"
+    const url = "//{process.env.REACT_APP_API_SERVER}/protected"
     const config = {}
 
     axios.get(url, config)
@@ -72,7 +72,7 @@ class Contact extends Component {
               <div className="card-body p-5">
                 <div className="row">
                   <div className="col-md-8">
-                    <form action="http://localhost:3001/send-contact" method="POST" onSubmit={this.handleSubmit}>
+                    <form action={"//"+process.env.REACT_APP_API_SERVER+"/send-contact"} method="POST" onSubmit={this.handleSubmit}>
                       <div className="row">
                         <div className="col-md-6">
                           <div className="md-form">

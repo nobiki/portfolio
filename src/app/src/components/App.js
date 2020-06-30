@@ -26,8 +26,7 @@ class App extends Component {
   }
 
   getData() {
-    // const url = "//api.portfolio.local/get-experiences"
-    const url = "//localhost:3001/get-experiences"
+    const url = "//{process.env.REACT_APP_API_SERVER}/get-experiences"
     const config = {}
 
     axios.get(url, config)
