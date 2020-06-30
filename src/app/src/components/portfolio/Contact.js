@@ -37,57 +37,55 @@ class Contact extends Component {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate
               </p>
             </div>
-            <form onSubmit={this.handleSubmit}>
-              <div className="card mb-5 wow fadeInUp" data-wow-delay=".4s">
-                <div className="card-body p-5">
-                  <div className="row">
-                    <div className="col-md-8">
-                      <form action="https://formspree.io/youremail@example.com" method="POST">
-                        <div className="row">
-                          <div className="col-md-6">
-                            <div className="md-form">
-                              <input className="form-control" id="name" type="text" name="name" required="required" placeholder="Your Name" onChange={this.handleChange}/>
-                            </div>
-                          </div>
-                          <div className="col-md-6">
-                            <div className="md-form">
-                              <input className="form-control" id="email" type="text" name="email" required="required" placeholder="Your Email" onChange={this.handleChange}/>
-                            </div>
+            <div className="card mb-5 wow fadeInUp" data-wow-delay=".4s">
+              <div className="card-body p-5">
+                <div className="row">
+                  <div className="col-md-8">
+                    <form onSubmit={this.handleSubmit}>
+                      <div className="row">
+                        <div className="col-md-6">
+                          <div className="md-form">
+                            <input className="form-control" id="name" type="text" name="name" required="required" placeholder="Your Name" onChange={this.handleChange}/>
                           </div>
                         </div>
-                        <div className="row">
-                          <div className="col-md-12">
-                            <div className="md-form">
-                              <input className="form-control" id="subject" type="text" name="subject" placeholder="Subject" onChange={this.handleChange}/>
-                            </div>
-                          </div>
-                          <div className="col-md-12">
-                            <div className="md-form">
-                              <textarea className="md-textarea" id="message" name="message" required="required" placeholder="Message" onChange={this.handleChange}></textarea>
-                            </div>
+                        <div className="col-md-6">
+                          <div className="md-form">
+                            <input className="form-control" id="email" type="text" name="email" required="required" placeholder="Your Email" onChange={this.handleChange}/>
                           </div>
                         </div>
-                        <div className="center-on-small-only mb-4">
-                          <button className="btn btn-indigo ml-0" type="submit"><i className="fa fa-paper-plane-o mr-2"></i> Send</button>
+                      </div>
+                      <div className="row">
+                        <div className="col-md-12">
+                          <div className="md-form">
+                            <input className="form-control" id="subject" type="text" name="subject" placeholder="Subject" onChange={this.handleChange}/>
+                          </div>
                         </div>
-                      </form>
-                    </div>
-                    <div className="col-md-4">
-                      <ul className="list-unstyled text-center">
-                        <li className="mt-4"><i className="fa fa-map-marker indigo-text fa-2x"></i>
-                          <p className="mt-2">Osaka, Japan</p>
-                        </li>
-                        <a href="https://twitter.com/_nobiki" target="_blank">
-                        <li className="mt-4"><i className="fa fa-twitter indigo-text fa-2x"></i>
-                          <p className="mt-2">@_nobiki</p>
-                        </li>
-                        </a>
-                      </ul>
-                    </div>
+                        <div className="col-md-12">
+                          <div className="md-form">
+                            <textarea className="md-textarea" id="message" name="message" required="required" placeholder="Message" onChange={this.handleChange}></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="center-on-small-only mb-4">
+                        <button className="btn btn-indigo ml-0" type="submit"><i className="fa fa-paper-plane-o mr-2"></i> Send</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div className="col-md-4">
+                    <ul className="list-unstyled text-center">
+                      <li className="mt-4"><i className="fa fa-map-marker indigo-text fa-2x"></i>
+                        <p className="mt-2">Osaka, Japan</p>
+                      </li>
+                      <a href="https://twitter.com/_nobiki" target="_blank">
+                      <li className="mt-4"><i className="fa fa-twitter indigo-text fa-2x"></i>
+                        <p className="mt-2">@_nobiki</p>
+                      </li>
+                      </a>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </section>
