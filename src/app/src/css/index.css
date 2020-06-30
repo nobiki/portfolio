@@ -103,6 +103,11 @@ ul.timeline > li.free:before {
     border: 3px solid #ffa500;
 }
 
+/**/
+#contact {
+    background-image: url('../img/bg4.jpg')
+}
+
 /* logo */
 i.lg-2 {
     width: 41px;

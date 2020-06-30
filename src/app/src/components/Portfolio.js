@@ -6,6 +6,8 @@ import Intro from "./portfolio/Intro"
 import Profile from "./portfolio/Profile"
 import Activity from "./portfolio/Activity"
 import History from "./portfolio/History"
+import Contact from "./portfolio/Contact"
+import Footer from "./portfolio/Footer"
 
 class Portfolio extends Component {
 
@@ -23,6 +25,8 @@ class Portfolio extends Component {
           <Profile></Profile>
           <Activity></Activity>
           <History></History>
+          <Contact></Contact>
+          <Footer></Footer>
         </header>
       </div>
     );
