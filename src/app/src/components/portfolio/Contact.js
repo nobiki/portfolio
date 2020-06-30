@@ -66,7 +66,6 @@ class Contact extends Component {
             <div className="wow fadeIn">
               <h2 className="h1 text-white pt-5 pb-3 text-center">Contact</h2>
               <p className="text-white px-5 mb-5 pb-3 lead text-center">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate
               </p>
             </div>
             <div className="card mb-5 wow fadeInUp" data-wow-delay=".4s">
