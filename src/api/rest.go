@@ -22,6 +22,24 @@ var experiences []Experience
 func main() {
 	r := gin.Default()
 
+	r.POST("/send-contact", func(c *gin.Context) {
+		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+		c.Writer.Header().Set("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE")
+
+		name := c.PostForm("name")
+		email := c.PostForm("email")
+		subject := c.PostForm("subject")
+		message := c.PostForm("message")
+
+		c.JSON(200, gin.H{
+			"status":  "posted",
+			"name": name,
+			"email": email,
+			"subject": subject,
+			"message": message,
+		})
+	})
+
 	r.GET("/get-experiences", func(c *gin.Context) {
 		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 		c.Writer.Header().Set("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE")
@@ -43,5 +61,6 @@ func main() {
 
 		c.JSON(200, output)
 	})
+
 	r.Run(":3001")
 }

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import axios from "axios";
+
 class Contact extends Component {
 
   constructor(props) {
@@ -18,12 +20,27 @@ class Contact extends Component {
 
   handleChange(event) {
     this.setState({[event.target.name]: event.target.value});
-    console.log(this.state);
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
+
+    const url = event.target.action
+    const submitData = new FormData()
+    submitData.append("name", this.state.name);
+    submitData.append("email", this.state.email);
+    submitData.append("subject", this.state.subject);
+    submitData.append("message", this.state.message);
+
+    axios.post(url, submitData,
+      {
+        headers: {
+          'content-type': 'multipart/form-data',
+        },
+      })
+      .then(results => {
+      })
+      .catch(error => {console.log(error)});
   }
 
   render() {
@@ -41,28 +58,28 @@ class Contact extends Component {
               <div className="card-body p-5">
                 <div className="row">
                   <div className="col-md-8">
-                    <form onSubmit={this.handleSubmit}>
+                    <form action="http://localhost:3001/send-contact" method="POST" onSubmit={this.handleSubmit}>
                       <div className="row">
                         <div className="col-md-6">
                           <div className="md-form">
-                            <input className="form-control" id="name" type="text" name="name" required="required" placeholder="Your Name" onChange={this.handleChange}/>
+                            <input className="form-control" id="name" type="text" name="name" value={this.state.name} required="required" placeholder="Your Name" onChange={this.handleChange}/>
                           </div>
                         </div>
                         <div className="col-md-6">
                           <div className="md-form">
-                            <input className="form-control" id="email" type="text" name="email" required="required" placeholder="Your Email" onChange={this.handleChange}/>
+                            <input className="form-control" id="email" type="text" name="email" value={this.state.email} required="required" placeholder="Your Email" onChange={this.handleChange}/>
                           </div>
                         </div>
                       </div>
                       <div className="row">
                         <div className="col-md-12">
                           <div className="md-form">
-                            <input className="form-control" id="subject" type="text" name="subject" placeholder="Subject" onChange={this.handleChange}/>
+                            <input className="form-control" id="subject" type="text" name="subject" value={this.state.subject} placeholder="Subject" onChange={this.handleChange}/>
                           </div>
                         </div>
                         <div className="col-md-12">
                           <div className="md-form">
-                            <textarea className="md-textarea" id="message" name="message" required="required" placeholder="Message" onChange={this.handleChange}></textarea>
+                            <textarea className="md-textarea" id="message" name="message" required="required" value={this.state.message} placeholder="Message" onChange={this.handleChange}/>
                           </div>
                         </div>
                       </div>
