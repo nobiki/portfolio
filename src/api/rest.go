@@ -1,7 +1,9 @@
 package main
 
 import (
+	"os"
 	"fmt"
+	"log"
 	// "time"
 
 	// "github.com/gin-contrib/sessions"
@@ -12,6 +14,9 @@ import (
 	"github.com/jinzhu/gorm"
 	// "github.com/bdwilliams/go-jsonify/jsonify"
 	_ "github.com/lib/pq"
+
+	"github.com/sendgrid/sendgrid-go"
+	"github.com/sendgrid/sendgrid-go/helpers/mail"
 )
 
 type Experience struct {
@@ -52,15 +57,29 @@ func main() {
 
 		name := c.PostForm("name")
 		email := c.PostForm("email")
+
+		from := mail.NewEmail(name, email)
 		subject := c.PostForm("subject")
-		message := c.PostForm("message")
+		to := mail.NewEmail("portfolio", os.Getenv("PORTFOLIO_ENV_TO"))
+		plainTextContent := c.PostForm("message")
+		htmlContent := plainTextContent
+		sendmail := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
+		client := sendgrid.NewSendClient(os.Getenv("PORTFOLIO_ENV_EMAIL_API_KEY"))
+		response, err := client.Send(sendmail)
+		if err != nil {
+			log.Println(err)
+		} else {
+			fmt.Println(response.StatusCode)
+			fmt.Println(response.Body)
+			fmt.Println(response.Headers)
+		}
 
 		c.JSON(200, gin.H{
 			"status":  "posted",
 			"name": name,
 			"email": email,
 			"subject": subject,
-			"message": message,
+			"message": plainTextContent,
 		})
 	})
 

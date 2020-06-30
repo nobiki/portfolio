@@ -89,7 +89,7 @@ class Contact extends Component {
                       <div className="row">
                         <div className="col-md-12">
                           <div className="md-form">
-                            <input className="form-control" id="subject" type="text" name="subject" value={this.state.subject} placeholder="Subject" onChange={this.handleChange}/>
+                            <input className="form-control" id="subject" type="text" name="subject" required="required" value={this.state.subject} placeholder="Subject" onChange={this.handleChange}/>
                           </div>
                         </div>
                         <div className="col-md-12">
