@@ -8,14 +8,28 @@ class Contact extends Component {
     super(props);
 
     this.state = {
+      csrf_token: "",
       name: "",
       email: "",
       subject: "",
       message: ""
     }
 
+    // this.getCsrfToken(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  getCsrfToken(event) {
+    const url = "//localhost:3001/protected"
+    const config = {}
+
+    axios.get(url, config)
+      .then(results => {
+        this.setState({ csrf_token: results.data });
+        console.log(this.state.csrf_token);
+      })
+      .catch(error => {console.log(error)});
   }
 
   handleChange(event) {
@@ -36,6 +50,7 @@ class Contact extends Component {
       {
         headers: {
           'content-type': 'multipart/form-data',
+          // 'X-CSRF-Token': this.state.csrf_token
         },
       })
       .then(results => {
