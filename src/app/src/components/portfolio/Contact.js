@@ -46,28 +46,24 @@ class Contact extends Component {
                         <div className="row">
                           <div className="col-md-6">
                             <div className="md-form">
-                              <input className="form-control" id="name" type="text" name="name" required="required" onChange={this.handleChange}/>
-                              <label for="name">Your name</label>
+                              <input className="form-control" id="name" type="text" name="name" required="required" placeholder="Your Name" onChange={this.handleChange}/>
                             </div>
                           </div>
                           <div className="col-md-6">
                             <div className="md-form">
-                              <input className="form-control" id="email" type="text" name="email" required="required" onChange={this.handleChange}/>
-                              <label for="email">Your email</label>
+                              <input className="form-control" id="email" type="text" name="email" required="required" placeholder="Your Email" onChange={this.handleChange}/>
                             </div>
                           </div>
                         </div>
                         <div className="row">
                           <div className="col-md-12">
                             <div className="md-form">
-                              <input className="form-control" id="subject" type="text" name="subject" required="required" onChange={this.handleChange}/>
-                              <label for="subject">Subject</label>
+                              <input className="form-control" id="subject" type="text" name="subject" placeholder="Subject" onChange={this.handleChange}/>
                             </div>
                           </div>
                           <div className="col-md-12">
                             <div className="md-form">
-                              <textarea className="md-textarea" id="message" name="message" required="required" onChange={this.handleChange}></textarea>
-                              <label for="message">Your message</label>
+                              <textarea className="md-textarea" id="message" name="message" required="required" placeholder="Message" onChange={this.handleChange}></textarea>
                             </div>
                           </div>
                         </div>
