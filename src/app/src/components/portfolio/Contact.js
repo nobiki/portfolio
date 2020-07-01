@@ -98,6 +98,7 @@ class Contact extends Component {
                         </div>
                       </div>
                       <div className="center-on-small-only mb-4">
+                        <div class="g-recaptcha" data-sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}></div>
                         <button className="btn btn-indigo ml-0" type="submit"><i className="fa fa-paper-plane-o mr-2"></i> Send</button>
                       </div>
                     </form>
