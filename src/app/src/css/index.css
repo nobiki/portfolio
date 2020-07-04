@@ -108,6 +108,10 @@ ul.timeline > li.free:before {
     background-image: url('../img/bg4.jpg')
 }
 
+#contact .status-text{
+    white-space: pre-wrap;
+}
+
 /* logo */
 i.lg-2 {
     width: 41px;
