@@ -12,7 +12,8 @@ class Contact extends Component {
       name: "",
       email: "",
       subject: "",
-      message: ""
+      message: "",
+      errors: ""
     }
 
     // this.getCsrfToken(this);
@@ -39,23 +40,34 @@ class Contact extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    const url = event.target.action
-    const submitData = new FormData()
-    submitData.append("name", this.state.name);
-    submitData.append("email", this.state.email);
-    submitData.append("subject", this.state.subject);
-    submitData.append("message", this.state.message);
+    console.log(document.getElementById("g-recaptcha-response").value);
 
-    axios.post(url, submitData,
-      {
-        headers: {
-          'content-type': 'multipart/form-data',
-          // 'X-CSRF-Token': this.state.csrf_token
-        },
-      })
-      .then(results => {
-      })
-      .catch(error => {console.log(error)});
+    if("" != document.getElementById("g-recaptcha-response").value)
+    {
+      this.setState({errors:""});
+
+      const url = event.target.action;
+      const submitData = new FormData();
+      submitData.append("name", this.state.name);
+      submitData.append("email", this.state.email);
+      submitData.append("subject", this.state.subject);
+      submitData.append("message", this.state.message);
+
+      // axios.post(url, submitData,
+      //   {
+      //     headers: {
+      //       'content-type': 'multipart/form-data',
+      //       // 'X-CSRF-Token': this.state.csrf_token
+      //     },
+      //   })
+      //   .then(results => {
+      //   })
+      //   .catch(error => {console.log(error)});
+    }else{
+      this.setState({errors: "reCAPTCHAをチェックして下さい"});
+    }
+    console.log(this.state);
+
   }
 
   render() {
@@ -99,7 +111,8 @@ class Contact extends Component {
                       </div>
                       <div className="center-on-small-only mb-4">
                         <div class="g-recaptcha" data-sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}></div>
-                        <button className="btn btn-indigo ml-0" type="submit"><i className="fa fa-paper-plane-o mr-2"></i> Send</button>
+                        <div class="row m-3 red-text">{this.state.errors}</div>
+                        <button className="btn btn-indigo ml-0" type="submit"> <i className="fa fa-paper-plane-o mr-2"></i> Send </button>
                       </div>
                     </form>
                   </div>
