@@ -32,7 +32,6 @@ class Contact extends Component {
     axios.get(url, config)
       .then(results => {
         this.setState({ csrf_token: results.data });
-        console.log(this.state.csrf_token);
       })
       .catch(error => {console.log(error)});
   }
@@ -44,7 +43,7 @@ class Contact extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    console.log(document.getElementById("g-recaptcha-response").value);
+    // console.log(document.getElementById("g-recaptcha-response").value);
 
     if("" != document.getElementById("g-recaptcha-response").value)
     {
@@ -92,7 +91,7 @@ class Contact extends Component {
         status_color: "red"
       });
     }
-    console.log(this.state);
+    // console.log(this.state);
 
   }
 
