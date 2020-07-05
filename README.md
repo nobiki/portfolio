@@ -1,6 +1,17 @@
-# portfolio-react
+# portfolio
 
-### node
+This is My Portfolio sites Repository
+
+Web Site: https://portfolio.oji.0j0.jp
+
+#### Products used
+
+* Infrastracture: `Docker`
+* Web: `Nginx`
+* Server-side: `golang(gin)`
+* Front-end: `react`
+
+## node
 
 ```
 // First time only
@@ -13,7 +24,7 @@ npm install --prefix app
 npm run --prefix app build
 ```
 
-### go
+## go
 
 ```
 // First time only
