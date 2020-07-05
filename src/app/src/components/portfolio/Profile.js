@@ -39,7 +39,7 @@ class Profile extends Component {
                 <div className="col-10">
                   <h5 className="font-bold">front-end</h5>
                   <p className="grey-text">
-                    Vue, jQuery, Webpack, Socket.io
+                    Vue, React, jQuery, Webpack, Socket.io
                   </p>
                 </div>
               </div>
