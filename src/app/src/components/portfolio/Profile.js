@@ -80,7 +80,7 @@ class Profile extends Component {
                 <div className="col-10">
                   <h5 className="font-bold">other</h5>
                   <p className="grey-text">
-                    Selenium, Robotframework, Jenkins, Apache Drill, JMeter, Node-RED, Terraform
+                    Selenium, Robotframework, Jenkins, Apache Drill, JMeter, Node-RED, Terraform, Debian, IoT(motion, TSL2561)
                   </p>
                 </div>
               </div>

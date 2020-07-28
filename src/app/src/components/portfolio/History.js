@@ -288,7 +288,7 @@ class History extends Component {
                       <i className="fa lg-1 lg-aws-2"></i>
                       <i className="fa lg-1 lg-docker"></i>
                       <i className="fa lg-1 lg-selenium"></i>
-                      <i className="fa lg-1 lg-jquery"></i>
+                      <i className="fa lg-1 lg-python-2"></i>
                       <i className="fa lg-1 lg-mysql"></i>
                       <i className="fa lg-1 lg-php"></i>
                       現在
