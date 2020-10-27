@@ -299,7 +299,7 @@ class History extends Component {
                   </p>
                 </li>
               </ul>
-            <small><a href="https://skillsheet.nobiki.com" target="_blank" title="スキルシート"><i className="fa fa-lock gray-text"></i>&nbsp;&nbsp;SkillSheet</a></small>
+            <small><a href="https://skillsheet.nobiki.com" target="_blank" title="スキルシート"><i className="fa fa-lock gray-text"></i>&nbsp;&nbsp;Skill Sheet</a></small>
             </div>
           </div>
         </div>
