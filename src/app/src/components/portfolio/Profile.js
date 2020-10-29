@@ -61,7 +61,7 @@ class Profile extends Component {
                 <div className="col-10">
                   <h5 className="font-bold">AWS</h5>
                   <p className="grey-text">
-                    EC2, ECS, RDS, Elasticache, Aurora Serverless, Lambda, CloudFront, CodeBuild, Cognito, Route 53, VPC
+                    EC2, ECS, RDS, Elasticache, Aurora Serverless, Lambda, CloudFront, CodeBuild, Cognito, etc
                   </p>
                 </div>
               </div>
