@@ -295,7 +295,7 @@ class History extends Component {
                     </font>
                   </p>
                   <p>
-                  某インサイドセールスシステムの開発にjoinし、保守・E2Eテスト自動化・インフラ構築(AWS)を行っています
+                  某インサイドセールスシステムの開発にjoinし、保守・E2Eテスト自動化・インフラ構築(AWS)・CI/CDなど、主にSRE関係を担当しています
                   </p>
                 </li>
               </ul>
