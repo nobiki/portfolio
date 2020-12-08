@@ -18,8 +18,6 @@ jobs:
         echo "$ACTIONS_SSH_KEY" > secret_key
         chmod 600 secret_key
         ssh -oStrictHostKeyChecking=no ${SSH_USER}@${SSH_HOST} -i secret_key "cd ${REPOS_ROOT} && ./deploy.sh"
-    - name: Set COMMIT_MESSAGE
-      run: echo ::set-env name=COMMIT_MESSAGE::$(echo "${{ github.event.head_commit.message }}" | tr '\n' ' ')
     - name: Slack Notification on SUCCESS
       if: success()
       uses: tokorom/action-slack-incoming-webhook@master
@@ -44,7 +42,7 @@ jobs:
                 },
                 {
                   "title": "Commit Message",
-                  "value": "${{ env.COMMIT_MESSAGE }}"
+                  "value": "deploy"
                 },
                 {
                   "title": "GitHub Actions URL",
