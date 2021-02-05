@@ -33,9 +33,9 @@ class Activity extends Component {
           </div>
           <div className="row">
             <div className="col-md-4 mb-r wow fadeInUp" data-wow-delay=".5s"><i className="fa fa-pencil-square fa-3x green-text"></i>
-              <a href="https://7me.oji.0j0.jp" target="_blank">
+              <a href="https://7me.nobiki.com" target="_blank">
                 <h3 className="h4 mt-3">Tech Blog</h3>
-                <p className="mt-3 blue-grey-text">https://7me.oji.0j0.jp</p>
+                <p className="mt-3 blue-grey-text">https://7me.nobiki.com</p>
               </a>
             </div>
             <div className="col-md-4 mb-r wow fadeInUp" data-wow-delay=".5s"><i className="fa fa-twitter fa-3x cyan-text"></i>
