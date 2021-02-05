@@ -12,7 +12,7 @@ class Activity extends Component {
             </p>
           </div>
           <div className="row">
-            <div className="col-md-4 mb-r wow fadeInUp" data-wow-delay=".3s"><i className="fa fa-github fa-3x purple-text"></i>
+            <div className="col-md-4 mb-r wow fadeInUp" data-wow-delay=".3s"><i className="fa fa-github fa-3x black-text"></i>
               <a href="https://github.com/nobiki" target="_blank">
                 <h3 className="h4 mt-3">Github</h3>
                 <p className="mt-3 blue-grey-text">https://github.com/nobiki</p>
@@ -44,10 +44,10 @@ class Activity extends Component {
                 <p className="mt-3 blue-grey-text">https://twitter.com/_nobiki</p>
               </a>
             </div>
-            <div className="col-md-4 mb-r wow fadeInUp" data-wow-delay=".5s"><i className="fa fa-twitter fa-3x cyan-text"></i>
-              <a href="https://twitter.com/_nobiki" target="_blank">
-                <h3 className="h4 mt-3">Twitter</h3>
-                <p className="mt-3 blue-grey-text">https://twitter.com/_nobiki</p>
+            <div className="col-md-4 mb-r wow fadeInUp" data-wow-delay=".5s"><i className="fa fa-home fa-3x purple-text"></i>
+              <a href="https://room.rakuten.co.jp/nobiki/items" target="_blank">
+                <h3 className="h4 mt-3">my ROOM</h3>
+                <p className="mt-3 blue-grey-text">https://room.rakuten.co.jp/nobiki/items</p>
               </a>
             </div>
           </div>
