@@ -44,6 +44,12 @@ class Activity extends Component {
                 <p className="mt-3 blue-grey-text">https://twitter.com/_nobiki</p>
               </a>
             </div>
+            <div className="col-md-4 mb-r wow fadeInUp" data-wow-delay=".5s"><i className="fa fa-twitter fa-3x cyan-text"></i>
+              <a href="https://twitter.com/_nobiki" target="_blank">
+                <h3 className="h4 mt-3">Twitter</h3>
+                <p className="mt-3 blue-grey-text">https://twitter.com/_nobiki</p>
+              </a>
+            </div>
           </div>
         </div>
       </section>
