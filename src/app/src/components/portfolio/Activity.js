@@ -47,7 +47,7 @@ class Activity extends Component {
             <div className="col-md-4 mb-r wow fadeInUp" data-wow-delay=".5s"><i className="fa fa-home fa-3x purple-text"></i>
               <a href="https://room.rakuten.co.jp/nobiki/items" target="_blank">
                 <h3 className="h4 mt-3">my ROOM</h3>
-                <p className="mt-3 blue-grey-text">https://room.rakuten.co.jp/nobiki/items</p>
+                <p className="mt-3 blue-grey-text">my new gear...</p>
               </a>
             </div>
           </div>
