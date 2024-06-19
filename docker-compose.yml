@@ -1,5 +1,3 @@
-version: '3.7'
-
 services:
 
   postgres:
@@ -68,5 +66,8 @@ services:
       - ${PWD}/https-portal/nginx-conf/api.portfolio.local.ssl.conf.erb:/var/lib/nginx-conf/api.portfolio.local.ssl.conf.erb:ro
 
 networks:
+  default:
+    name: bridge
+    external: true
   b0:
     name: ${COMPOSE_PROJECT_NAME}-net
