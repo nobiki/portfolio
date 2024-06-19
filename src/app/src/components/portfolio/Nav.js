@@ -13,7 +13,6 @@ class Nav extends Component {
               <li className="nav-item"><a className="nav-link" href="#profile">Profile</a></li>
               <li className="nav-item"><a className="nav-link" href="#activity">Activity</a></li>
               <li className="nav-item"><a className="nav-link" href="#history">History</a></li>
-              <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
