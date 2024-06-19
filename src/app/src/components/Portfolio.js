@@ -25,7 +25,6 @@ class Portfolio extends Component {
           <Profile></Profile>
           <Activity></Activity>
           <History></History>
-          <Contact></Contact>
           <Footer></Footer>
         </header>
       </div>
